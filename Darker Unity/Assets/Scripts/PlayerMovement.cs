@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     //Values for movement speeds and other world constants
     public float speed = 12f;
     public float gravity = -9.8f;
-    public float jumpHeight = 3f;
+    public float jumpHeight = 6f;
 
     //Variables for ground checks
     public Transform groundCheck;
@@ -44,25 +44,41 @@ public class PlayerMovement : MonoBehaviour
         //Checks for input and changes the player into or out of a crouched position
         if (Input.GetKeyDown(KeyCode.C) && !isCrouched)
         {
-            speed = 6f;
-            playerCamera.position += new Vector3(0f, -1f, 0f);
-            isCrouched = true;
+            Crouch();
         }
         else if (Input.GetKeyDown(KeyCode.C) && isCrouched)
         {
-            speed = 12f;
-            playerCamera.position += new Vector3(0f, 1f, 0f);
-            isCrouched = false;
+            Uncrouch();
         }
 
         //Checks if the player is attempting to jump while grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if (isCrouched)
+            {
+                Uncrouch();
+            }
+            velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);
         }
 
         //Moves the player using gravity variables when falling
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * 3 * Time.deltaTime;
         controllerPlayer.Move(velocity * Time.deltaTime);
+    }
+
+    void Crouch()
+    {
+        speed = 6f;
+        playerCamera.position += new Vector3(0f, -1f, 0f);
+        controllerPlayer.height -= 1f;
+        isCrouched = true;
+    }
+
+    void Uncrouch()
+    {
+        speed = 12f;
+        playerCamera.position += new Vector3(0f, 1f, 0f);
+        controllerPlayer.height += 1f;
+        isCrouched = false;
     }
 }
