@@ -69,16 +69,14 @@ public class PlayerMovement : MonoBehaviour
     void Crouch()
     {
         speed = 6f;
-        playerCamera.position += new Vector3(0f, -1f, 0f);
-        controllerPlayer.height -= 1f;
+        controllerPlayer.height -= 2f;
         isCrouched = true;
     }
 
     void Uncrouch()
     {
         speed = 12f;
-        playerCamera.position += new Vector3(0f, 1f, 0f);
-        controllerPlayer.height += 1f;
+        controllerPlayer.height += 2f;
         isCrouched = false;
     }
 }
