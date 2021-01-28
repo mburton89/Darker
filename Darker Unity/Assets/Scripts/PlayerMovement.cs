@@ -22,15 +22,16 @@ public class PlayerMovement : MonoBehaviour
     //Crouching variables
     bool isCrouched;
     public Transform playerCamera;
+    public int frameStep = 0;
 
     // Update is called once per frame
     void Update()
     {
-        //Checks for falling and if the play is on the ground
+        //Checks for falling and if the player is on the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -1f;
+            velocity.y = -2f;
         }
 
         //Recieves input from player using WASD keys for movement
@@ -44,20 +45,81 @@ public class PlayerMovement : MonoBehaviour
         //Checks for input and changes the player into or out of a crouched position
         if (Input.GetKeyDown(KeyCode.C) && !isCrouched)
         {
-            Crouch();
+            //Crouch();
+            frameStep++;
         }
         else if (Input.GetKeyDown(KeyCode.C) && isCrouched)
         {
-            Uncrouch();
+            //Uncrouch();
+            frameStep--;
+        }
+        if (!isCrouched && frameStep > 0)
+        {
+            switch (frameStep)
+            {
+                case 2:
+                    controllerPlayer.height -= 0.5f;
+                    speed -= 1.5f;
+                    break;
+                case 3:
+                    controllerPlayer.height -= 0.5f;
+                    speed -= 1.5f;
+                    break;
+                case 6:
+                    controllerPlayer.height -= 0.5f;
+                    speed -= 1.5f;
+                    break;
+                case 8:
+                    controllerPlayer.height = 1.8f;
+                    speed = 6f;
+                    isCrouched = true;
+                    frameStep--;
+                    break;
+                default:
+                    break;
+
+            }
+            frameStep++;
+        }
+        if (isCrouched && frameStep < 8)
+        {
+            switch (frameStep)
+            {
+                case 6:
+                    controllerPlayer.height += 0.5f;
+                    speed += 1.5f;
+                    break;
+                case 4:
+                    controllerPlayer.height += 0.5f;
+                    speed += 1.5f;
+                    break;
+                case 2:
+                    controllerPlayer.height += 0.5f;
+                    speed += 1.5f;
+                    break;
+                case 0:
+                    controllerPlayer.height = 3.8f;
+                    speed = 12f;
+                    isCrouched = false;
+                    frameStep++;
+                    break;
+                default:
+                    break;
+
+            }
+            frameStep--;
         }
 
         //Checks if the player is attempting to jump while grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            if (isCrouched)
-            {
-                Uncrouch();
-            }
+            //if (isCrouched)
+            //{
+                //Uncrouch();
+                speed = 12f;
+                controllerPlayer.height = 3.8f;
+                frameStep = 0;
+            //}
             velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);
         }
 
@@ -66,19 +128,17 @@ public class PlayerMovement : MonoBehaviour
         controllerPlayer.Move(velocity * Time.deltaTime);
     }
 
-    void Crouch()
+    /*void Crouch()
     {
         speed = 6f;
-        playerCamera.position += new Vector3(0f, -1f, 0f);
-        controllerPlayer.height -= 1f;
+        controllerPlayer.height -= 2f;
         isCrouched = true;
     }
 
     void Uncrouch()
     {
         speed = 12f;
-        playerCamera.position += new Vector3(0f, 1f, 0f);
-        controllerPlayer.height += 1f;
+        controllerPlayer.height += 2f;
         isCrouched = false;
-    }
+    }*/
 }
