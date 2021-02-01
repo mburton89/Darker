@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
                     controllerPlayer.height -= 0.5f;
                     speed -= 1.5f;
                     break;
-                case 3:
+                case 4:
                     controllerPlayer.height -= 0.5f;
                     speed -= 1.5f;
                     break;
