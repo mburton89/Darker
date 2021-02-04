@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 6af28b0e068c6754bafc22fdb4f58bb2
+guid: 9900956d313d0fb4888e834ad5c4f329
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: ffaa957e98c881248b522daa1de39e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: 5c5ec0bca6eac0546809e46717708fea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign
+    second: {fileID: 2100000, guid: fed8d2511f9baa14ea367efcd1b8335f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
