@@ -8,9 +8,11 @@ public class HUD : MonoBehaviour
     public GameObject container;
 
     public List<Image> outlines;
-    void Start()
+    private int _index;
+
+    void Awake()
     {
-        
+        _index = 0;
     }
 
     // Update is called once per frame
@@ -22,6 +24,15 @@ public class HUD : MonoBehaviour
         if (Input.mouseScrollDelta.y == 1 || Input.mouseScrollDelta.y == -1)
         {
             ShowMenu();
+        }
+
+        if (Input.mouseScrollDelta.y == 1 && _index < outlines.Count)
+        {
+            _index++;
+        }
+        else if (Input.mouseScrollDelta.y == -1 && _index > 0)
+        {
+            _index--;
         }
     }
 
