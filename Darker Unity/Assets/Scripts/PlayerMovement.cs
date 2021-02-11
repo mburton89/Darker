@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controllerPlayer;
 
     //Values for movement speeds and other world constants
-    public float speed = 12f;
+    public float speed = 10f;
     public float gravity = -9.8f;
     public float jumpHeight = 6f;
 
@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     bool isCrouched;
     public Transform playerCamera;
     public int frameStep = 0;
+
+    public bool isSprint = false;
 
     // Update is called once per frame
     void Update()
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case 8:
                     controllerPlayer.height = 1.8f;
-                    speed = 6f;
+                    speed = 4f;
                     isCrouched = true;
                     frameStep--;
                     break;
@@ -99,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case 0:
                     controllerPlayer.height = 3.8f;
-                    speed = 12f;
+                    speed = 10f;
                     isCrouched = false;
                     frameStep++;
                     break;
@@ -110,16 +112,24 @@ public class PlayerMovement : MonoBehaviour
             frameStep--;
         }
 
+        //checks for input to sprint
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprint)
+        {
+            speed = 16f;
+            isSprint = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftShift) && isSprint)
+        {
+            speed = 10f;
+            isSprint = false;
+        }
+
         //Checks if the player is attempting to jump while grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //if (isCrouched)
-            //{
-                //Uncrouch();
-                speed = 12f;
-                controllerPlayer.height = 3.8f;
-                frameStep = 0;
-            //}
+            speed = 10f;
+            controllerPlayer.height = 3.8f;
+            frameStep = 0;
             velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);
         }
 
@@ -127,18 +137,4 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * 3 * Time.deltaTime;
         controllerPlayer.Move(velocity * Time.deltaTime);
     }
-
-    /*void Crouch()
-    {
-        speed = 6f;
-        controllerPlayer.height -= 2f;
-        isCrouched = true;
-    }
-
-    void Uncrouch()
-    {
-        speed = 12f;
-        controllerPlayer.height += 2f;
-        isCrouched = false;
-    }*/
 }
