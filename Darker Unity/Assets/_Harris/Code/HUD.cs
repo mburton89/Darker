@@ -7,6 +7,8 @@ public class HUD : MonoBehaviour
 {
     public GameObject container;
 
+    public GameObject MessagePanel;
+
     public List<Image> outlines;
     private int _index;
 
@@ -47,5 +49,15 @@ public class HUD : MonoBehaviour
         container.SetActive(true);
         yield return new WaitForSeconds(3);
         container.SetActive(false);
+    }
+
+    public void OpenMessagePanel(string text)
+    {
+        MessagePanel.SetActive(true);
+    }
+
+    public void CloseMessagePanel(string text)
+    {
+        MessagePanel.SetActive(false);
     }
 }
