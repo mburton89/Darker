@@ -131,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
             controllerPlayer.height = 3.8f;
             frameStep = 0;
             velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);
+            isSprint = false;
         }
 
         //Moves the player using gravity variables when falling
