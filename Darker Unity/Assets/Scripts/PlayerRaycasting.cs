@@ -26,7 +26,17 @@ public class PlayerRaycasting : MonoBehaviour
                 {
                     Debug.Log("Touchie " + whatIHit.collider.gameObject.name);
                     GameObject thingIUse = GameObject.Find(whatIHit.collider.gameObject.name);
-                    thingIUse.GetComponent<TestInteract>().Interaction();
+                    switch (thingIUse.name)
+                    {
+                        case "TestInteract":
+                            thingIUse.GetComponent<TestInteract>().Interaction();
+                            break;
+                        case "Button":
+                            thingIUse.GetComponent<TestDoorInteract>().Interaction();
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
         }
