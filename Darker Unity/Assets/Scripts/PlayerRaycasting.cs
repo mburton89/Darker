@@ -20,11 +20,11 @@ public class PlayerRaycasting : MonoBehaviour
 
         if (Physics.Raycast(this.transform.position, this.transform.forward, out whatIHit, distanceToSee))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && Cursor.lockState == CursorLockMode.Locked)
             {
                 if (whatIHit.collider.tag == "Interactable")
                 {
-                    Debug.Log("Touchie " + whatIHit.collider.gameObject.name);
+                    //Debug.Log("Touchie " + whatIHit.collider.gameObject.name);
                     GameObject thingIUse = GameObject.Find(whatIHit.collider.gameObject.name);
                     switch (thingIUse.name)
                     {
