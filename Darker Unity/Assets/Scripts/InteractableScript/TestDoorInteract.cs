@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TestDoorInteract : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class TestDoorInteract : MonoBehaviour
                 openUI = false;
                 KeypadUI.SetActive(false);
             }
-            if (locked && entry.Length < 4)
+            if (locked && entry.Length < padCode.Length)
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
@@ -114,4 +115,14 @@ public class TestDoorInteract : MonoBehaviour
             }
         }
     }
+    /*
+    public void OnPointerDown(PointerEventData data)
+    {
+        if (openUI)
+        {
+            string name = EventSystem.current.currentSelectedGameObject.name;
+            Debug.Log(name);
+        }
+    }
+    */
 }
