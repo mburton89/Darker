@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     public float gravity = -9.8f;
     public float jumpHeight = 6f;
+    float x;
+    float z;
 
     //Variables for ground checks
     public Transform groundCheck;
@@ -37,8 +39,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Recieves input from player using WASD keys for movement
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            x = Input.GetAxis("Horizontal");
+            z = Input.GetAxis("Vertical");
+        }
 
         //Moves the player along the ground
         Vector3 move = transform.right * x + transform.forward * z;
@@ -47,12 +52,10 @@ public class PlayerMovement : MonoBehaviour
         //Checks for input and changes the player into or out of a crouched position
         if (Input.GetKeyDown(KeyCode.C) && !isCrouched)
         {
-            //Crouch();
             frameStep++;
         }
         else if (Input.GetKeyDown(KeyCode.C) && isCrouched)
         {
-            //Uncrouch();
             frameStep--;
         }
         if (!isCrouched && frameStep > 0)

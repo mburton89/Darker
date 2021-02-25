@@ -6,15 +6,19 @@ using UnityEngine.EventSystems;
 
 public class TestDoorInteract : MonoBehaviour
 {
+    //Linked door gameobject
     public GameObject Door;
 
+    //keypad internal booleans
     public bool switched = false;
     public bool locked = true;
     public bool openUI = false;
 
+    //keycode entry variables
     public string padCode;
     public string entry;
 
+    //keypad external variables
     public GameObject KeypadUI;
     public Text input;
 
@@ -90,6 +94,7 @@ public class TestDoorInteract : MonoBehaviour
         }
     }
 
+    //function called when player interacts with the gameobject
     public void Interaction()
     {
         if (locked)
@@ -115,14 +120,78 @@ public class TestDoorInteract : MonoBehaviour
             }
         }
     }
-    /*
-    public void OnPointerDown(PointerEventData data)
+    
+    //code for mouse inputs
+    public void OnClickMouse(Button button)
     {
         if (openUI)
         {
-            string name = EventSystem.current.currentSelectedGameObject.name;
-            Debug.Log(name);
+            string name = button.name;
+            if (name == "Button (*)")
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                openUI = false;
+                KeypadUI.SetActive(false);
+            }
+            if (locked && entry.Length < padCode.Length)
+            {
+                if (name == "Button (1)")
+                {
+                    entry += "1";
+                }
+                if (name == "Button (2)")
+                {
+                    entry += "2";
+                }
+                if (name == "Button (3)")
+                {
+                    entry += "3";
+                }
+                if (name == "Button (4)")
+                {
+                    entry += "4";
+                }
+                if (name == "Button (5)")
+                {
+                    entry += "5";
+                }
+                if (name == "Button (6)")
+                {
+                    entry += "6";
+                }
+                if (name == "Button (7)")
+                {
+                    entry += "7";
+                }
+                if (name == "Button (8)")
+                {
+                    entry += "8";
+                }
+                if (name == "Button (9)")
+                {
+                    entry += "9";
+                }
+                if (name == "Button (0)")
+                {
+                    entry += "0";
+                }
+            }
+            if (name == "Button (#)")
+            {
+                if (entry == padCode)
+                {
+                    locked = false;
+                    Debug.Log("Access Granted");
+                    Cursor.lockState = CursorLockMode.Locked;
+                    openUI = false;
+                    KeypadUI.SetActive(false);
+                }
+                else
+                {
+                    entry = "";
+                }
+            }
         }
     }
-    */
+    
 }

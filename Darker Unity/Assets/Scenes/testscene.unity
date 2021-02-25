@@ -644,7 +644,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 280040961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 280040960}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &280040961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +950,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 335053236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 335053235}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &335053236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,7 +1971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 779005606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 779005605}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &779005606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2862,7 +2898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1094373140}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1094373139}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1094373140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3290,7 +3338,6 @@ GameObject:
   - component: {fileID: 1248031279}
   - component: {fileID: 1248031278}
   - component: {fileID: 1248031277}
-  - component: {fileID: 1248031280}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -3360,7 +3407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248031278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1248031277}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248031278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,19 +3458,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248031275}
   m_CullTransparentMesh: 0
---- !u!114 &1248031280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248031275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
 --- !u!1 &1304678690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +3779,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488239752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1488239751}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1488239752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4182,7 +4240,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1686668248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1686668247}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686668248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4302,7 +4372,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1745911718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1745911717}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1745911718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4422,7 +4504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753216811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1753216810}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1753216811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,7 +4636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759751436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1759751435}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759751436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4984,7 +5090,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1932560316}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1932560315}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1932560316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5104,7 +5222,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2055135958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374070698}
+        m_TargetAssemblyTypeName: TestDoorInteract, Assembly-CSharp
+        m_MethodName: OnClickMouse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2055135957}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2055135958
 MonoBehaviour:
   m_ObjectHideFlags: 0
