@@ -34,6 +34,9 @@ public class PlayerRaycasting : MonoBehaviour
                         case "Button":
                             thingIUse.GetComponent<TestDoorInteract>().Interaction();
                             break;
+                        case "Poster":
+                            thingIUse.GetComponent<FileInteract>().Interaction();
+                            break;
                         default:
                             break;
                     }
