@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     bool isCrouched;
     public Transform playerCamera;
     public int frameStep = 0;
+    public Collectible activeCollectible;
 
     // Update is called once per frame
     void Update()
@@ -115,10 +116,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //if (isCrouched)
             //{
-                //Uncrouch();
-                speed = 12f;
-                controllerPlayer.height = 3.8f;
-                frameStep = 0;
+            //Uncrouch();
+            speed = 12f;
+            controllerPlayer.height = 3.8f;
+            frameStep = 0;
             //}
             velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);
         }
@@ -126,6 +127,18 @@ public class PlayerMovement : MonoBehaviour
         //Moves the player using gravity variables when falling
         velocity.y += gravity * 3 * Time.deltaTime;
         controllerPlayer.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if(activeCollectible != null)
+            {
+                activeCollectible.GetCollected();
+                activeCollectible = null;
+
+            }
+        }
+
+
     }
 
     /*void Crouch()
@@ -142,3 +155,6 @@ public class PlayerMovement : MonoBehaviour
         isCrouched = false;
     }*/
 }
+
+
+

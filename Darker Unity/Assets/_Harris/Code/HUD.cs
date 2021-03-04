@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public GameObject container;
+    public static HUD Instance;
+
+    public GameObject Inventory;
 
     public GameObject MessagePanel;
 
@@ -14,6 +16,8 @@ public class HUD : MonoBehaviour
 
     void Awake()
     {
+        Instance = this;
+
         _index = 0;
     }
 
@@ -46,18 +50,24 @@ public class HUD : MonoBehaviour
 
     private IEnumerator DelayHide()
     {
-        container.SetActive(true);
+        Inventory.SetActive(true);
         yield return new WaitForSeconds(3);
-        container.SetActive(false);
+        Inventory.SetActive(false);
     }
 
-    public void OpenMessagePanel(string text)
+    public void OpenInventory(string text)
     {
         MessagePanel.SetActive(true);
     }
 
-    public void CloseMessagePanel(string text)
+    public void CloseInventory(string text)
     {
         MessagePanel.SetActive(false);
+    }
+
+
+    void Start()
+    {
+        
     }
 }
