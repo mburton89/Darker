@@ -264,7 +264,7 @@ Material:
     - _MaskmapMetal: 0
     - _MaskmapSmoothness: 1
     - _MaterialID: 1
-    - _Metallic: 1
+    - _Metallic: 0
     - _MetallicScale: 1
     - _NormalBlendSrc: 0
     - _NormalMapSpace: 0
