@@ -39,15 +39,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Recieves input from player using WASD keys for movement
-        if (Cursor.lockState == CursorLockMode.Locked)
-        {
-            x = Input.GetAxis("Horizontal");
-            z = Input.GetAxis("Vertical");
-        }
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
+
 
         //Moves the player along the ground
-        Vector3 move = transform.right * x + transform.forward * z;
-        controllerPlayer.Move(move * speed * Time.deltaTime);
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            Vector3 move = transform.right * x + transform.forward * z;
+            controllerPlayer.Move(move * speed * Time.deltaTime);
+        }
 
         //Checks for input and changes the player into or out of a crouched position
         if (Input.GetKeyDown(KeyCode.C) && !isCrouched)
