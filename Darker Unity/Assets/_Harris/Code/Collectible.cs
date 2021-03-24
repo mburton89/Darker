@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    public enum CollectibleType
+    {
+        Flashlight,
+        FirstAidKit,
+        Knife,
+        Pistol,
+        Shotgun
+    }
+
+    public CollectibleType activeCollectibleType;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -25,6 +36,7 @@ public class Collectible : MonoBehaviour
     public void GetCollected()
     {
         Destroy(gameObject);
+        HUD.Instance.HandleItemCollected(activeCollectibleType);
         HUD.Instance.MessagePanel.SetActive(false);
     } 
 }

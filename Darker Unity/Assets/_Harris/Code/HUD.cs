@@ -14,6 +14,12 @@ public class HUD : MonoBehaviour
     public List<Image> outlines;
     private int _index;
 
+    [SerializeField] private GameObject _FlashlightThumbnail;
+    [SerializeField] private GameObject _FirstAidThumbnail;
+    [SerializeField] private GameObject _KnifeThumbnail;
+    [SerializeField] private GameObject _PistolThumbnail;
+    [SerializeField] private GameObject _ShotgunThumbnail;
+
     void Awake()
     {
         Instance = this;
@@ -65,9 +71,27 @@ public class HUD : MonoBehaviour
         MessagePanel.SetActive(false);
     }
 
-
-    void Start()
+    public void HandleItemCollected(Collectible.CollectibleType collectibleType)
     {
-        
+        if (collectibleType == Collectible.CollectibleType.Flashlight)
+        {
+            _FlashlightThumbnail.SetActive(true);
+        }
+        else if (collectibleType == Collectible.CollectibleType.FirstAidKit)
+        {
+            _FirstAidThumbnail.SetActive(true);
+        }
+        else if (collectibleType == Collectible.CollectibleType.Knife)
+        {
+            _KnifeThumbnail.SetActive(true);
+        }
+        else if (collectibleType == Collectible.CollectibleType.Pistol)
+        {
+            _PistolThumbnail.SetActive(true);
+        }
+        else if (collectibleType == Collectible.CollectibleType.Shotgun)
+        {
+            _ShotgunThumbnail.SetActive(true);
+        }
     }
 }
