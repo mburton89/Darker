@@ -9,6 +9,7 @@ public class FileInteract : MonoBehaviour
     public GameObject ImageUI;
     public Sprite img;
     public Image ImageCanvas;
+    public GameObject FileButton;
 
     public bool openUI = false;
 
@@ -35,5 +36,7 @@ public class FileInteract : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Confined;
         ImageUI.SetActive(true);
+
+        FileButton.SetActive(true);
     }
 }
