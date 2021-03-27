@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 197300603}
   - component: {fileID: 197300602}
   - component: {fileID: 197300601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,6 +499,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &247713100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5635730359136886928, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
+  m_PrefabInstance: {fileID: 1914124669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &247713101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247713100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ef4f853259044eb3d973127d8ebd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 746480416}
 --- !u!1 &469524187
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +919,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.001440248, y: 0.02166305, z: 0.02109235}
   m_Center: {x: -2.7993937e-11, y: -0.009999999, z: 0.00035843436}
+--- !u!95 &746480416 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3242641875043309733, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
+  m_PrefabInstance: {fileID: 1914124669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833043871
 GameObject:
   m_ObjectHideFlags: 0
