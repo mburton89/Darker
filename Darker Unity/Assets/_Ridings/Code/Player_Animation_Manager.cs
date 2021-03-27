@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Animation_Manager : MonoBehaviour
 {
     public Animator animator;
+    public GameObject pistol;
+    public GameObject flashlight;
     private int pistolFiredID;
     private int nearInteractableID;
     private int pistolEquippedID;
@@ -27,6 +29,20 @@ public class Player_Animation_Manager : MonoBehaviour
 
     void Update()
     {
+        if (animator.GetBool(pistolEquippedID) == true)
+        {
+            pistol.SetActive(true);
+            flashlight.SetActive(false);
+        }
+
+
+        if (animator.GetBool(flashlightEquippedID) == true)
+        {
+            flashlight.SetActive(true);
+            pistol.SetActive(false);
+        }
+
+
         if (Input.GetButtonDown("Fire"))
         {
             FirePistol();
@@ -36,11 +52,26 @@ public class Player_Animation_Manager : MonoBehaviour
         {
             animator.SetBool(pistolFiredID, false);
         }
+
+        if (Input.GetButtonDown("Reload"))
+        {
+            ReloadPistol();
+        }
+
+        else
+        {
+            animator.SetBool(isReloadingID, false);
+        }
     }
     
     void FirePistol()
     {
         animator.SetBool(pistolFiredID, true);
+    }
+
+    void ReloadPistol()
+    {
+        animator.SetBool(isReloadingID, true);
     }
 
 }
