@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Animation_Manager : MonoBehaviour
 {
+    PlayerRaycasting playerRaycasting;
+
     public Animator animator;
     public GameObject pistol;
     public GameObject muzzleFlash;
