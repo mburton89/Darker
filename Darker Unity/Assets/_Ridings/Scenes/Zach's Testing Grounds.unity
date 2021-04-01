@@ -1532,6 +1532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 247713101, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
+      propertyPath: playerRaycasting
+      value: 
+      objectReference: {fileID: 2031294783}
     - target: {fileID: 5635730359136886927, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1582,6 +1586,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
+--- !u!114 &2031294783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5635730357361568799, guid: bab355835cfe6e54aad83f0f93bd533a, type: 3}
+  m_PrefabInstance: {fileID: 1914124669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8a01ae638f4a74f97c0d7fdceefd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &526338092990687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1965,7 @@ GameObject:
   - component: {fileID: 919132148314355692}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1983,7 +1998,7 @@ GameObject:
   - component: {fileID: 919132148526578688}
   m_Layer: 0
   m_Name: Keypad
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2016,7 +2031,7 @@ GameObject:
   - component: {fileID: 919132148625135463}
   m_Layer: 0
   m_Name: Pistol Ammo
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRaycasting : MonoBehaviour
 {
     public float distanceToSee;
-    RaycastHit whatIHit;
+    public RaycastHit whatIHit;
 
     // Start is called before the first frame update
     void Start()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Animation_Manager : MonoBehaviour
 {
-    PlayerRaycasting playerRaycasting;
+    public PlayerRaycasting playerRaycasting;
 
     public Animator animator;
     public GameObject pistol;
@@ -18,6 +18,8 @@ public class Player_Animation_Manager : MonoBehaviour
     private int isReloadingID;
 
     private float fireCooldown;
+
+    private Collider target;
 
     private void Start()
     {
@@ -82,6 +84,20 @@ public class Player_Animation_Manager : MonoBehaviour
         {
             animator.SetBool(isReloadingID, false);
         }
+
+        if (playerRaycasting.whatIHit.collider != null)
+        {
+            if (playerRaycasting.whatIHit.collider.gameObject.tag == "Interactable")
+            {
+                animator.SetBool(nearInteractableID, true);
+            }
+        }
+
+        else
+        {
+            animator.SetBool(nearInteractableID, false);
+        }
+
     }
     
     void FirePistol()
