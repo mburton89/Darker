@@ -9,6 +9,7 @@ public class AIScript : MonoBehaviour
 
     Transform target;
     NavMeshAgent agent;
+    public int attackCooldown = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class AIScript : MonoBehaviour
             if (distance <= agent.stoppingDistance)
             {
                 FaceTarget();
-                //attack
+                //Attack();
             }
         }
     }
@@ -46,4 +47,17 @@ public class AIScript : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
+
+    /*void Attack()
+    {
+        if (attackCooldown == 10)
+        {
+            target.gameObject.GetComponent<HealthManager>().health -= 10;
+            attackCooldown = 0;
+        }
+        else
+        {
+            attackCooldown++;
+        }
+    }*/
 }

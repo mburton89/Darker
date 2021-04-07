@@ -20,8 +20,8 @@ public class DeathPlane : MonoBehaviour
     {
         if ((other.gameObject.GetComponent("HealthManager") != null))
         {
-            //other.gameObject.GetComponent<HealthManager>().health -= 25;
-            other.gameObject.GetComponent<HealthManager>().Instakill();
+            other.gameObject.GetComponent<HealthManager>().health -= 25;
+            //other.gameObject.GetComponent<HealthManager>().Instakill();
         }
     }
 }
