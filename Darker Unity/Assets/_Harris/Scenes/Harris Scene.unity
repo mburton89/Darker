@@ -201,6 +201,7 @@ MonoBehaviour:
     m_Bits: 512
   playerCamera: {fileID: 1578503591}
   frameStep: 0
+  isSprint: 0
   activeCollectible: {fileID: 0}
 --- !u!65 &71672435
 BoxCollider:
@@ -473,7 +474,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press P to Pick Up Items '
+  m_Text: 'Press E to Pick Up Items '
 --- !u!222 &276379934
 CanvasRenderer:
   m_ObjectHideFlags: 0
