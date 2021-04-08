@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isSprint = false;
 
+    public Collectible activeCollectible;
+
     // Update is called once per frame
     void Update()
     {
@@ -141,5 +143,14 @@ public class PlayerMovement : MonoBehaviour
         //Moves the player using gravity variables when falling
         velocity.y += gravity * 3 * Time.deltaTime;
         controllerPlayer.Move(velocity * Time.deltaTime);
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            if(activeCollectible != null)
+            {
+                activeCollectible.GetCollected();
+                activeCollectible = null;
+            }
+        }
     }
 }
