@@ -1944,6 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838ef4f853259044eb3d973127d8ebd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRaycasting: {fileID: 5635730357361568799}
   animator: {fileID: 3242641875043309733}
   pistol: {fileID: 8286848110671713840}
   muzzleFlash: {fileID: 2583483637596723740}
