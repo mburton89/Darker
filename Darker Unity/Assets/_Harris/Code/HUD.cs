@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
     public GameObject MessagePanel;
 
     public List<Image> outlines;
+    private GameObject _currentOutline;
     private int _index;
 
     [SerializeField] private GameObject _FlashlightThumbnail;
@@ -38,13 +39,15 @@ public class HUD : MonoBehaviour
             ShowMenu();
         }
 
-        if (Input.mouseScrollDelta.y == 1 && _index < outlines.Count)
+        if (Input.mouseScrollDelta.y == 1 && _index < outlines.Count - 1)
         {
             _index++;
+            ShowActiveOutline();
         }
         else if (Input.mouseScrollDelta.y == -1 && _index > 0)
         {
             _index--;
+            ShowActiveOutline();
         }
     }
 
@@ -59,6 +62,16 @@ public class HUD : MonoBehaviour
         Inventory.SetActive(true);
         yield return new WaitForSeconds(3);
         Inventory.SetActive(false);
+    }
+
+    void ShowActiveOutline()
+    {
+        if (_currentOutline != null)
+        {
+            _currentOutline.SetActive(false);
+        }
+        outlines[_index].gameObject.SetActive(true);
+        _currentOutline = outlines[_index].gameObject;
     }
 
     public void OpenInventory(string text)
