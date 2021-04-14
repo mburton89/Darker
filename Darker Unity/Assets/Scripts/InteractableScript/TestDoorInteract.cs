@@ -8,6 +8,7 @@ public class TestDoorInteract : MonoBehaviour
 {
     //Linked door gameobject
     public GameObject Door;
+    public Quaternion DoorPos;
 
     //keypad internal booleans
     public bool switched = false;
@@ -21,6 +22,11 @@ public class TestDoorInteract : MonoBehaviour
     //keypad external variables
     public GameObject KeypadUI;
     public Text input;
+
+    private void Start()
+    {
+        DoorPos = Door.transform.rotation;
+    }
 
     void Update()
     {
@@ -110,12 +116,14 @@ public class TestDoorInteract : MonoBehaviour
         {
             if (!switched)
             {
-                Door.transform.Translate(-8f, 0f, 0f);
+                Rigidbody rb = Door.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
                 switched = true;
             }
             else if (switched)
             {
-                Door.transform.Translate(8f, 0f, 0f);
+                Rigidbody rb = Door.GetComponent<Rigidbody>();
+                rb.isKinematic = true;
                 switched = false;
             }
         }
