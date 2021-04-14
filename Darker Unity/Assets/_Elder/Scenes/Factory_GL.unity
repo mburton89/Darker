@@ -38923,6 +38923,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: f5b0cbe9361203641a3d7f5826766dbe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39600,10 +39601,10 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
-    m_TextureGroup: 6
+    m_TextureGroup: 1
   - m_Indexes: 98000000990000009a000000990000009b0000009a000000
     m_SmoothingGroup: 0
     m_Uv:
@@ -39617,10 +39618,10 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
-    m_TextureGroup: 6
+    m_TextureGroup: 1
   - m_Indexes: 9c0000009d0000009e0000009d0000009f0000009e000000
     m_SmoothingGroup: 0
     m_Uv:
@@ -39634,10 +39635,10 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
-    m_TextureGroup: 6
+    m_TextureGroup: 1
   - m_Indexes: a0000000a1000000a2000000a1000000a3000000a2000000
     m_SmoothingGroup: 0
     m_Uv:
@@ -39651,10 +39652,10 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 1
     m_ManualUV: 0
     elementGroup: -1
-    m_TextureGroup: 6
+    m_TextureGroup: 1
   m_SharedVertices:
   - m_Vertices: 29000000
   - m_Vertices: 28000000
@@ -40357,14 +40358,24 @@ Mesh:
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
-    indexCount: 246
+    indexCount: 222
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 192
+    vertexCount: 168
     localAABB:
       m_Center: {x: 79.5, y: 1.6071229, z: -4.5000005}
       m_Extent: {x: 79.5, y: 1.6071229, z: 4.5000014}
+  - serializedVersion: 2
+    firstByte: 444
+    indexCount: 24
+    topology: 0
+    baseVertex: 0
+    firstVertex: 168
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 154.25943, y: 1.8571229, z: -4.500001}
+      m_Extent: {x: 4.7405777, y: 1.3571229, z: 4.500001}
   m_Shapes:
     vertices: []
     shapes: []
