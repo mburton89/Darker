@@ -20,10 +20,6 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            entity.SetActive(false);
-        }
         if (entity.name == "FPSPlayer")
         {
             healthDisplay.text = "HEALTH: " + health.ToString();
@@ -57,6 +53,15 @@ public class HealthManager : MonoBehaviour
                 tempColor.a = 0f;
                 viewColor.color = tempColor;
             }
+        }
+        if (health <= 0)
+        {
+            if (entity.name == "FPSPlayer")
+            {
+                healthDisplay.text = "";
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+            entity.SetActive(false);
         }
     }
 

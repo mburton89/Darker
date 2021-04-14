@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class TestDoorInteract : MonoBehaviour
 {
-    //Linked door gameobject
+    //Linked door gameobject and variables
     public GameObject Door;
-    public Quaternion DoorPos;
+    public int doorMove = 0;
 
     //keypad internal booleans
     public bool switched = false;
@@ -25,7 +25,6 @@ public class TestDoorInteract : MonoBehaviour
 
     private void Start()
     {
-        DoorPos = Door.transform.rotation;
     }
 
     void Update()
@@ -98,6 +97,11 @@ public class TestDoorInteract : MonoBehaviour
                 }
             }
         }
+        if (locked == false && doorMove < 2000)
+        {
+            Door.transform.Translate(0f, 0.005f, 0f);
+            doorMove++;
+        }
     }
 
     //function called when player interacts with the gameobject
@@ -112,7 +116,7 @@ public class TestDoorInteract : MonoBehaviour
             input.text = entry;
             KeypadUI.SetActive(true);
         } 
-        else
+        /*else
         {
             if (!switched)
             {
@@ -126,7 +130,7 @@ public class TestDoorInteract : MonoBehaviour
                 rb.isKinematic = true;
                 switched = false;
             }
-        }
+        }*/
     }
     
     //code for mouse inputs
