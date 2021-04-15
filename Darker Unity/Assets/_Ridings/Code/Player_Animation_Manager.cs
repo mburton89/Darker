@@ -108,7 +108,7 @@ public class Player_Animation_Manager : MonoBehaviour
     {
         fireCooldown += 1.5f;
         animator.SetBool(pistolFiredID, true);
-        Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward * 1, playerCamera.transform.rotation);
+        Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward * 3, playerCamera.transform.rotation);
         instantiatedProjectile.velocity = playerCamera.transform.forward * projectileSpeed;
         StartCoroutine("MuzzleFlash");
     }
