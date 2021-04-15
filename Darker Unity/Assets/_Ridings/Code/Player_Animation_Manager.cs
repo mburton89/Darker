@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Animation_Manager : MonoBehaviour
 {
     public PlayerRaycasting playerRaycasting;
+    public HUD hud;
 
     public Animator animator;
     public GameObject pistol;
@@ -24,6 +25,8 @@ public class Player_Animation_Manager : MonoBehaviour
     private float fireCooldown;
 
     private Collider target;
+
+    private int indexNumber;
 
     private void Start()
     {
@@ -47,6 +50,13 @@ public class Player_Animation_Manager : MonoBehaviour
 
     void Update()
     {
+
+        indexNumber = hud._index;
+        if (indexNumber == 0)
+        {
+            animator.SetBool(flashlightEquippedID, true);
+            animator.SetBool(pistolEquippedID, false);
+        }
         //Fire cooldown timer
         if (fireCooldown > 0)
         {
@@ -125,5 +135,4 @@ public class Player_Animation_Manager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         muzzleFlash.SetActive(false);
     }
-
 }
