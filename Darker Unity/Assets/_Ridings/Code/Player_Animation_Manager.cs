@@ -10,6 +10,10 @@ public class Player_Animation_Manager : MonoBehaviour
     public GameObject pistol;
     public GameObject muzzleFlash;
     public GameObject flashlight;
+    public Rigidbody projectile;
+    public Camera playerCamera;
+
+    public float projectileSpeed;
 
     private int pistolFiredID;
     private int nearInteractableID;
@@ -104,6 +108,8 @@ public class Player_Animation_Manager : MonoBehaviour
     {
         fireCooldown += 1.5f;
         animator.SetBool(pistolFiredID, true);
+        Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward * 1, playerCamera.transform.rotation);
+        instantiatedProjectile.velocity = playerCamera.transform.forward * projectileSpeed;
         StartCoroutine("MuzzleFlash");
     }
 
