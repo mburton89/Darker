@@ -487,6 +487,7 @@ MonoBehaviour:
   playerCamera: {fileID: 8839038139945498685}
   frameStep: 0
   isSprint: 0
+  activeCollectible: {fileID: 0}
 --- !u!143 &1845522738707738085
 CharacterController:
   m_ObjectHideFlags: 0
@@ -550,6 +551,9 @@ MonoBehaviour:
   pistol: {fileID: 2642051342492621659}
   muzzleFlash: {fileID: 8390451777624151927}
   flashlight: {fileID: 3315538050347772130}
+  projectile: {fileID: 936547736589350650, guid: f43c0b6d276cca44f9a75a7bc4c6769c, type: 3}
+  playerCamera: {fileID: 8839038139945498656}
+  projectileSpeed: 240
 --- !u!1 &1845522739773013816
 GameObject:
   m_ObjectHideFlags: 0
