@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HealthManager : MonoBehaviour
     public int health;
     public Text healthDisplay;
     public Image viewColor;
+    public GameObject deathMenu;
     
 
     // Start is called before the first frame update
@@ -22,6 +24,14 @@ public class HealthManager : MonoBehaviour
     {
         if (entity.name == "FPSPlayer")
         {
+            if (Time.timeScale == 0)
+            {
+                healthDisplay.enabled = false;
+            }
+            else
+            {
+                healthDisplay.enabled = true;
+            }
             healthDisplay.text = "HEALTH: " + health.ToString();
             if (health <= 0)
             {
@@ -62,11 +72,22 @@ public class HealthManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
             }
             entity.SetActive(false);
+            deathMenu.SetActive(true);
         }
     }
 
     public void Instakill()
     {
         health = 0;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
