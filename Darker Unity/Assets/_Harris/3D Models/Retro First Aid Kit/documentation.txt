@@ -1,0 +1,14 @@
+Retro First Aid Kit it's a lowpoly game ready model with PBR textures.
+
+Textures resolution: 2048x2048 (Albedo, MetallicSmoothness, Normal, AO, Height).
+Textures format: PNG.
+
+Unwrapped UVs: non-overlapping.
+
+Polygons: 884
+Tris: 1724
+
+--------
+
+If you have any questions, please write me on e-mail.
+My e-mail: tatiana.gladkaya11@gmail.com

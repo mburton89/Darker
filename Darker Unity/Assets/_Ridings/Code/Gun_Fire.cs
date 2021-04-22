@@ -8,7 +8,7 @@ public class Gun_Fire : MonoBehaviour
     public GameObject gun;
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire"))
         {
             gun.GetComponent<Animator>().Play("Gun_Fire_Anim");
         }
