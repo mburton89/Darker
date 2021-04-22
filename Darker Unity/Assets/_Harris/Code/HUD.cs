@@ -14,6 +14,7 @@ public class HUD : MonoBehaviour
     public List<Image> outlines;
     public GameObject _currentOutline;
     public int _index;
+    public GameObject Reticle;
 
     [SerializeField] private GameObject _FlashlightThumbnail;
     [SerializeField] private GameObject _FirstAidThumbnail;

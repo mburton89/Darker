@@ -38,6 +38,20 @@ public class Collectible : MonoBehaviour
         Destroy(gameObject);
         HUD.Instance.HandleItemCollected(activeCollectibleType);
         HUD.Instance.MessagePanel.SetActive(false);
+        if (activeCollectibleType == CollectibleType.Flashlight)
+        {
+            HUD.Instance._index = 0;
+        }
+        else if (activeCollectibleType == CollectibleType.Pistol)
+        {
+            HUD.Instance._index = 1;
+        }
+        else if (activeCollectibleType == CollectibleType.Shotgun)
+        {
+            HUD.Instance._index = 4; //TODO double check the 4
+        }
+
+        //TODO do same for pistol
     } 
 }
 

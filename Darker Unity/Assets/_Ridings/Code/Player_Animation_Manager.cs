@@ -26,7 +26,7 @@ public class Player_Animation_Manager : MonoBehaviour
 
     private Collider target;
 
-    private int indexNumber;
+    public int indexNumber;
 
     private void Start()
     {
@@ -50,12 +50,20 @@ public class Player_Animation_Manager : MonoBehaviour
 
     void Update()
     {
-
+        print(indexNumber);
         indexNumber = hud._index;
         if (indexNumber == 0)
         {
             animator.SetBool(flashlightEquippedID, true);
             animator.SetBool(pistolEquippedID, false);
+            HUD.Instance.Reticle.SetActive(false);
+        }
+
+        if (indexNumber == 1)
+        {
+            animator.SetBool(flashlightEquippedID, false);
+            animator.SetBool(pistolEquippedID, true);
+            HUD.Instance.Reticle.SetActive(true);
         }
         //Fire cooldown timer
         if (fireCooldown > 0)
