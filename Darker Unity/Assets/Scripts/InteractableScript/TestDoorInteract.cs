@@ -8,7 +8,9 @@ public class TestDoorInteract : MonoBehaviour
 {
     //Linked door gameobject and variables
     public GameObject Door;
-    public int doorMove = 0;
+    public float speed = 5f;
+    public int doorMove;
+    public Vector3 endPoint;
 
     //keypad internal booleans
     public bool switched = false;
@@ -25,6 +27,7 @@ public class TestDoorInteract : MonoBehaviour
 
     private void Start()
     {
+        endPoint = Door.transform.position + new Vector3(0f, 10f, 0f);
     }
 
     void Update()
@@ -97,10 +100,10 @@ public class TestDoorInteract : MonoBehaviour
                 }
             }
         }
-        if (locked == false && doorMove < 2000)
+        if (locked == false)
         {
-            Door.transform.Translate(0f, 0.005f, 0f);
-            doorMove++;
+            float step = speed * Time.deltaTime;
+            Door.transform.position = Vector3.MoveTowards(Door.transform.position, endPoint, step*10);
         }
     }
 

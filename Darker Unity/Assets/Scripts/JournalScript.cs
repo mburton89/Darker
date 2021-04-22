@@ -18,7 +18,7 @@ public class JournalScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Cursor.lockState == CursorLockMode.Locked)
+        if (Cursor.lockState == CursorLockMode.Locked && Time.timeScale == 1)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -28,7 +28,7 @@ public class JournalScript : MonoBehaviour
                 contentText.enabled = false;
             }
         }
-        else if (Cursor.lockState == CursorLockMode.Confined)
+        else if (Cursor.lockState == CursorLockMode.Confined && Time.timeScale == 1)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
