@@ -7697,6 +7697,7 @@ GameObject:
   - component: {fileID: 8049378252343553743}
   - component: {fileID: 8600827558529303367}
   - component: {fileID: 5484329111826314969}
+  - component: {fileID: 784622387}
   m_Layer: 0
   m_Name: Shade
   m_TagString: Untagged
@@ -7752,6 +7753,25 @@ CapsuleCollider:
   m_Height: 0.23
   m_Direction: 1
   m_Center: {x: 0, y: 0.73, z: 0}
+--- !u!95 &784622387
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277520624065541237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0c399461d9dc2944fab666b52619f774, type: 3}
+  m_Controller: {fileID: 9100000, guid: f3ab04554e6b5424aa9a3eaa14a5e1c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7397612284366732499
 GameObject:
   m_ObjectHideFlags: 0
