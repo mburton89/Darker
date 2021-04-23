@@ -960,9 +960,13 @@ MonoBehaviour:
   animator: {fileID: 8839038139221333454}
   pistol: {fileID: 2642051342492621659}
   muzzleFlash: {fileID: 8390451777624151927}
+  gunshotPrefab: {fileID: 8375554717189774531, guid: c32a224b4ce40694eb7a0307f61c7a04, type: 3}
+  reloadPrefab: {fileID: 8375554717189774531, guid: 9cbf1637fd9a766478f7bd8b4097cb66, type: 3}
   flashlight: {fileID: 3315538050347772130}
   projectile: {fileID: 936547736589350650, guid: f43c0b6d276cca44f9a75a7bc4c6769c, type: 3}
   playerCamera: {fileID: 8839038139945498656}
+  magazineSize: 6
+  bulletsInMagazine: 0
   projectileSpeed: 240
   indexNumber: 0
 --- !u!1 &1845522739773013816
