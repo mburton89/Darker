@@ -59,7 +59,7 @@ public class Player_Animation_Manager : MonoBehaviour
 
     void Update()
     {
-        print(indexNumber);
+        //print(indexNumber);
         indexNumber = hud._index;
         if (indexNumber == 0)
         {
@@ -95,7 +95,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Fire Pistol
-        if (Input.GetButtonDown("Fire") && fireCooldown <= 0 && bulletsInMagazine > 0 && reloading == false)
+        if (Input.GetButtonDown("Fire") && fireCooldown <= 0 && bulletsInMagazine > 0 && reloading == false && animator.GetBool(pistolEquippedID) == true)
         {
             FirePistol();
         }
@@ -106,7 +106,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Reload Pistol
-        if (Input.GetButtonDown("Reload"))
+        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false)
         {
             Instantiate(reloadPrefab, pistol.transform);
             ReloadPistol();
