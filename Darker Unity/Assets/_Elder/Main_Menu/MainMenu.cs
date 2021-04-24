@@ -26,7 +26,6 @@ public class MainMenu : MonoBehaviour
     //Credits Credits
     public void Credits()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
-
 }
