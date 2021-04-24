@@ -10,10 +10,14 @@ public class Player_Animation_Manager : MonoBehaviour
     public Animator animator;
     public GameObject pistol;
     public GameObject muzzleFlash;
+    public GameObject gunshotPrefab;
+    public GameObject reloadPrefab;
     public GameObject flashlight;
     public Rigidbody projectile;
     public Camera playerCamera;
 
+    public int magazineSize;
+    public int bulletsInMagazine;
     public float projectileSpeed;
 
     private int pistolFiredID;
@@ -21,6 +25,7 @@ public class Player_Animation_Manager : MonoBehaviour
     private int pistolEquippedID;
     private int flashlightEquippedID;
     private int isReloadingID;
+    private bool reloading;
 
     private float fireCooldown;
 
@@ -46,11 +51,15 @@ public class Player_Animation_Manager : MonoBehaviour
 
         //Initialize fire cooldown
         fireCooldown = 0;
+
+        //Initialize Ammunition
+        bulletsInMagazine = magazineSize;
+
     }
 
     void Update()
     {
-        print(indexNumber);
+        //print(indexNumber);
         indexNumber = hud._index;
         if (indexNumber == 0)
         {
@@ -86,7 +95,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Fire Pistol
-        if (Input.GetButtonDown("Fire") && fireCooldown <= 0)
+        if (Input.GetButtonDown("Fire") && fireCooldown <= 0 && bulletsInMagazine > 0 && reloading == false && animator.GetBool(pistolEquippedID) == true)
         {
             FirePistol();
         }
@@ -97,8 +106,9 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Reload Pistol
-        if (Input.GetButtonDown("Reload"))
+        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false)
         {
+            Instantiate(reloadPrefab, pistol.transform);
             ReloadPistol();
         }
 
@@ -126,21 +136,31 @@ public class Player_Animation_Manager : MonoBehaviour
     {
         fireCooldown += 1.5f;
         animator.SetBool(pistolFiredID, true);
-        Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward * 3, playerCamera.transform.rotation);
+        Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward, playerCamera.transform.rotation);
         instantiatedProjectile.velocity = playerCamera.transform.forward * projectileSpeed;
+        bulletsInMagazine -= 1;
+        Instantiate(gunshotPrefab, pistol.transform);
         StartCoroutine("MuzzleFlash");
     }
 
     void ReloadPistol()
     {
+        reloading = true;
         animator.SetBool(isReloadingID, true);
+        StartCoroutine("ReloadWait");
     }
 
     IEnumerator MuzzleFlash()
     {
-
         muzzleFlash.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         muzzleFlash.SetActive(false);
+    }
+
+    IEnumerator ReloadWait()
+    {
+        yield return new WaitForSeconds(1.6f);
+        bulletsInMagazine = magazineSize;
+        reloading = false;
     }
 }
