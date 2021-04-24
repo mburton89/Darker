@@ -965,7 +965,7 @@ MonoBehaviour:
   flashlight: {fileID: 3315538050347772130}
   projectile: {fileID: 936547736589350650, guid: f43c0b6d276cca44f9a75a7bc4c6769c, type: 3}
   playerCamera: {fileID: 8839038139945498656}
-  magazineSize: 6
+  magazineSize: 8
   bulletsInMagazine: 0
   projectileSpeed: 240
   indexNumber: 0
