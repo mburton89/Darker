@@ -14,18 +14,18 @@ public class MainMenu : MonoBehaviour
     //EXIT THAT GAME BOY
     public void ExitGame()
     {
-        
+        Application.Quit();
     }
 
     //Read the story
     public void Story()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     //Credits Credits
     public void Credits()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 }

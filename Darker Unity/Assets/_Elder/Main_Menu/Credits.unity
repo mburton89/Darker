@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 477440363}
   - component: {fileID: 477440362}
   - component: {fileID: 477440361}
+  - component: {fileID: 477440365}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -295,6 +296,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &477440365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477440360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b863d03fb7cc0394f91964e60a95bfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &581118757
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +562,7 @@ GameObject:
   - component: {fileID: 1727570271}
   - component: {fileID: 1727570270}
   m_Layer: 5
-  m_Name: All Da People
+  m_Name: Roles&People
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,7 +584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -271}
+  m_AnchoredPosition: {x: 0, y: 4442}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1727570270
@@ -626,78 +639,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Creative Director
-
-    Justin Bryant
-
-
-    Sound Designer
-
-    Justin
-    Bryant
-
-
-    Narrative Design
-
-    Meghan Elder
-
-
-    Level Design
-
-    Jasmin
-    Sadikovic
-
-    Tony Koudys
-
-    Meghan Elder
-
-
-    3D Modeling
-
-    Zach Ridings
-
-    Danny
-
-    Liam
-    Hanson
-
-
-    Texturing
-
-    Zach Ridings
-
-
-    Animations
-
-    Zach Ridings
-
-
-    Coding
-
-    Zach
-    Ridings
-
-    Austin Harris
-
-
-    Concept Art
-
-    Danny
-
-
-    Environmental Artist
-
-    Zach
-    Ridings
-
-    Liam Hanson
-
-
-    QA
-
-    Tony Koudys
-
-'
+  m_Text: "\u300BCreative Director\u300A \nJustin Bryant\n\n\n\u300BSound Design\u300A\nJustin
+    Bryant\n\n\n\u300BNarrative Design\u300A\nMeghan Elder\n\n\n\u300BLevel Design\u300A\nJasmin
+    Sadikovic\nTony Koudys\nMeghan Elder \n\n\n\u300B3D Modeling\u300A\nZach Ridings\nLiam
+    Hanson\nDanny Hook\n\n\n\u300BTexturing\u300A\nZach Ridings\n\n\n\u300BAnimations\u300A\nZach
+    Ridings\n\n\n\u300BCoding\u300A\nZach Ridings\nJackson Wright\nAustan Harris\n\n\n\u300BEnviromental
+    Art\u300A\nZach Ridings\nLiam Hanson\n\n\n\u300BParticle Effects\u300A\nZach
+    Ridings\n\n\n\u300BConcept Art\u300A\nDanny Hook\n\n\n\u300BQA\u300A\nTony Koudys"
 --- !u!222 &1727570272
 CanvasRenderer:
   m_ObjectHideFlags: 0
