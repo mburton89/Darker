@@ -9,6 +9,7 @@ public class HealthManager : MonoBehaviour
     public int health;
     public Text healthDisplay;
     public Image viewColor;
+    public Camera deathCamera;
     
 
     // Start is called before the first frame update
@@ -60,6 +61,7 @@ public class HealthManager : MonoBehaviour
             {
                 healthDisplay.text = "";
                 Cursor.lockState = CursorLockMode.Confined;
+                deathCamera.enabled = true;
             }
             entity.SetActive(false);
         }
