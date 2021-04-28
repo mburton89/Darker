@@ -7700,9 +7700,9 @@ GameObject:
   - component: {fileID: 8600827558529303367}
   - component: {fileID: 5484329111826314969}
   - component: {fileID: 784622387}
-  - component: {fileID: 193201630}
   - component: {fileID: 193201631}
   - component: {fileID: 1253109167}
+  - component: {fileID: 189780881}
   m_Layer: 0
   m_Name: Shade
   m_TagString: Untagged
@@ -7773,22 +7773,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &193201630
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277520624065541237}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &193201631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7817,7 +7801,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -7825,6 +7809,24 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &189780881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277520624065541237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a81d5d66db70145be30b9e790b03d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 7277520624065541237}
+  health: 40
+  healthDisplay: {fileID: 0}
+  viewColor: {fileID: 0}
+  deathCamera: {fileID: 0}
+  deathMenu: {fileID: 0}
 --- !u!1 &7397612284366732499
 GameObject:
   m_ObjectHideFlags: 0

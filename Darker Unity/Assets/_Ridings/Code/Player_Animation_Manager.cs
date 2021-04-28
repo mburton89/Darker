@@ -95,7 +95,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Fire Pistol
-        if (Input.GetButtonDown("Fire") && fireCooldown <= 0 && bulletsInMagazine > 0 && reloading == false && animator.GetBool(pistolEquippedID) == true)
+        if (Input.GetButtonDown("Fire") && fireCooldown <= 0 && bulletsInMagazine > 0 && reloading == false && animator.GetBool(pistolEquippedID) == true && Cursor.lockState == CursorLockMode.Locked)
         {
             FirePistol();
         }
