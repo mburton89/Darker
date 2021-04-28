@@ -34,7 +34,7 @@ public class TestDoorInteract : MonoBehaviour
     {
         if (openUI == true)
         {
-            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 openUI = false;

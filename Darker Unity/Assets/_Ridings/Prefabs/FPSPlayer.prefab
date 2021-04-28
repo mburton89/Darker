@@ -847,6 +847,8 @@ GameObject:
   - component: {fileID: 1845522738707738087}
   - component: {fileID: 1845522738707738080}
   - component: {fileID: 6317072266570645542}
+  - component: {fileID: 1738996424}
+  - component: {fileID: 1738996425}
   m_Layer: 2
   m_Name: FPSPlayer
   m_TagString: Player
@@ -969,6 +971,39 @@ MonoBehaviour:
   bulletsInMagazine: 0
   projectileSpeed: 240
   indexNumber: 0
+--- !u!114 &1738996424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845522738707738107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a81d5d66db70145be30b9e790b03d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 1845522738707738107}
+  health: 100
+  healthDisplay: {fileID: 0}
+  viewColor: {fileID: 0}
+  deathCamera: {fileID: 0}
+  deathMenu: {fileID: 0}
+--- !u!114 &1738996425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845522738707738107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec104aefa37ab4fb32f7f75bccf973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  startLocked: 1
+  menu: {fileID: 0}
 --- !u!1 &1845522739773013816
 GameObject:
   m_ObjectHideFlags: 0
