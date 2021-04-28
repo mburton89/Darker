@@ -9,6 +9,10 @@ public class Bullet : MonoBehaviour
     {
 
         Destroy(gameObject);
+        if ((collision.gameObject.GetComponent("HealthManager") != null))
+        {
+            collision.gameObject.GetComponent<HealthManager>().health -= 10;
+        }
     }
 
 }

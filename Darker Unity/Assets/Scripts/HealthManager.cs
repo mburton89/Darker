@@ -10,6 +10,7 @@ public class HealthManager : MonoBehaviour
     public int health;
     public Text healthDisplay;
     public Image viewColor;
+    public Camera deathCamera;
     public GameObject deathMenu;
     
 
@@ -70,6 +71,7 @@ public class HealthManager : MonoBehaviour
             {
                 healthDisplay.text = "";
                 Cursor.lockState = CursorLockMode.Confined;
+                deathCamera.enabled = true;
             }
             entity.SetActive(false);
             deathMenu.SetActive(true);
