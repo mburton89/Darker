@@ -33,7 +33,7 @@ public class HUD : MonoBehaviour
     void Update()
     {
         //if(Input.mouseScrollDelta)
-        print("Scroll wheel: " + Input.mouseScrollDelta);
+        //print("Scroll wheel: " + Input.mouseScrollDelta);
 
         if (Input.mouseScrollDelta.y == 1 || Input.mouseScrollDelta.y == -1)
         {
