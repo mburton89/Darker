@@ -18,9 +18,11 @@ public class HUD : MonoBehaviour
 
     [SerializeField] private GameObject _FlashlightThumbnail;
     [SerializeField] private GameObject _FirstAidThumbnail;
-    [SerializeField] private GameObject _KnifeThumbnail;
     [SerializeField] private GameObject _PistolThumbnail;
-    [SerializeField] private GameObject _ShotgunThumbnail;
+
+    [SerializeField] private GameObject _FlashlightInactiveIndicator;
+    [SerializeField] private GameObject _FirstAidInactiveIndicator;
+    [SerializeField] private GameObject _PistolInactiveIndicator;
 
     void Awake()
     {
@@ -89,15 +91,15 @@ public class HUD : MonoBehaviour
     {
         if (collectibleType == Collectible.CollectibleType.Flashlight)
         {
-            _FlashlightThumbnail.SetActive(true);
+            _FlashlightInactiveIndicator.SetActive(false);
         }
         else if (collectibleType == Collectible.CollectibleType.FirstAidKit)
         {
-            _FirstAidThumbnail.SetActive(true);
+            _FirstAidInactiveIndicator.SetActive(false);
         }
         else if (collectibleType == Collectible.CollectibleType.Pistol)
         {
-            _PistolThumbnail.SetActive(true);
+            _PistolThumbnail.SetActive(false);
         }
     }
 }
