@@ -8,11 +8,12 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        Destroy(gameObject);
         if ((collision.gameObject.GetComponent("HealthManager") != null))
         {
             collision.gameObject.GetComponent<HealthManager>().health -= 10;
         }
+
+        Destroy(gameObject);
     }
 
 }
