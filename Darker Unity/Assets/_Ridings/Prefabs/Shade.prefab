@@ -7827,6 +7827,7 @@ MonoBehaviour:
   viewColor: {fileID: 0}
   deathCamera: {fileID: 0}
   deathMenu: {fileID: 0}
+  deadShade: {fileID: 3303975664885536677, guid: 108c2b13fff7d0a4dbcb344185212c7b, type: 3}
 --- !u!1 &7397612284366732499
 GameObject:
   m_ObjectHideFlags: 0
