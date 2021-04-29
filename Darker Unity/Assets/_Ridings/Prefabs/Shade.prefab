@@ -7786,6 +7786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  animator: {fileID: 784622387}
   attackCooldown: 0
 --- !u!195 &1253109167
 NavMeshAgent:

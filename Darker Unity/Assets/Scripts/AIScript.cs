@@ -7,6 +7,10 @@ public class AIScript : MonoBehaviour
 {
     public float lookRadius = 10f;
 
+    public Animator animator;
+
+    private int playerDetectedID;
+
     Transform target;
     NavMeshAgent agent;
     public int attackCooldown = 0;
@@ -16,6 +20,8 @@ public class AIScript : MonoBehaviour
     {
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
+        playerDetectedID = Animator.StringToHash("PlayerDetected");
+        animator.SetBool(playerDetectedID, false);
     }
 
     // Update is called once per frame
@@ -26,12 +32,18 @@ public class AIScript : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+            animator.SetBool(playerDetectedID, true);
 
             if (distance <= agent.stoppingDistance)
             {
                 FaceTarget();
                 //Attack();
             }
+        }
+
+        else
+        {
+            animator.SetBool(playerDetectedID, false);
         }
     }
 
