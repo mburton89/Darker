@@ -139,7 +139,7 @@ public class Player_Animation_Manager : MonoBehaviour
         Rigidbody instantiatedProjectile = Instantiate(projectile, playerCamera.transform.position + playerCamera.transform.forward, playerCamera.transform.rotation);
         instantiatedProjectile.velocity = playerCamera.transform.forward * projectileSpeed;
         bulletsInMagazine -= 1;
-        Instantiate(gunshotPrefab, pistol.transform);
+        Instantiate(gunshotPrefab, pistol.transform.position, pistol.transform.rotation, null);
         StartCoroutine("MuzzleFlash");
     }
 

@@ -12,7 +12,9 @@ public class HealthManager : MonoBehaviour
     public Image viewColor;
     public Camera deathCamera;
     public GameObject deathMenu;
-    
+
+    public GameObject deadShade;
+
 
     // Start is called before the first frame update
     void Start()
@@ -74,8 +76,19 @@ public class HealthManager : MonoBehaviour
                 deathCamera.enabled = true;
                 deathMenu.SetActive(true);
             }
-            entity.SetActive(false);
+            //entity.SetActive(false);
+
+            if (entity.name == "Shade")
+            {
+                KillShade();
+            }
         }
+    }
+
+    public void KillShade()
+    {
+        Instantiate(deadShade, entity.transform.position + transform.up * 1.5f, entity.transform.rotation, null);
+        Destroy(gameObject);
     }
 
     public void Instakill()
