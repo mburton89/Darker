@@ -7787,6 +7787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 10
   animator: {fileID: 784622387}
+  playerDetectedPrefab: {fileID: 4821390853768724142, guid: 7a2acd08cb89e9241a510e50e4d26d8d, type: 3}
   attackCooldown: 0
 --- !u!195 &1253109167
 NavMeshAgent:

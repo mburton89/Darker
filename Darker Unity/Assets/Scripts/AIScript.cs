@@ -11,6 +11,8 @@ public class AIScript : MonoBehaviour
 
     private int playerDetectedID;
 
+    public GameObject playerDetectedPrefab;
+
     Transform target;
     NavMeshAgent agent;
     public int attackCooldown = 0;
@@ -33,6 +35,11 @@ public class AIScript : MonoBehaviour
         {
             agent.SetDestination(target.position);
             animator.SetBool(playerDetectedID, true);
+
+            if (!FindObjectOfType<PlayerDetectedSound>())
+            {
+                Instantiate(playerDetectedPrefab, gameObject.transform.position + gameObject.transform.up * 0.75f, gameObject.transform.rotation, null);
+            }
 
             if (distance <= agent.stoppingDistance)
             {
