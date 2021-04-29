@@ -343,7 +343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 495, y: -276}
+  m_AnchoredPosition: {x: 575, y: -223}
   m_SizeDelta: {x: 135.71, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650423023
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 650423021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6a6b336bc733b41bf3458e6628381f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1585dac48af3a1c4e8278b4154b1dd04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &650423024
@@ -400,7 +400,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 650423025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 650423023}
+        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &650423025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575249260203793134, guid: 1a89853a428e6ab479b8e9b801728422, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -208.95
+      value: -265
       objectReference: {fileID: 0}
     - target: {fileID: 7575249260203793134, guid: 1a89853a428e6ab479b8e9b801728422, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
