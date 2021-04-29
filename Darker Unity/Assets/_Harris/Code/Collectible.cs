@@ -8,9 +8,7 @@ public class Collectible : MonoBehaviour
     {
         Flashlight,
         FirstAidKit,
-        Knife,
-        Pistol,
-        Shotgun
+        Pistol
     }
 
     public CollectibleType activeCollectibleType;
@@ -45,10 +43,6 @@ public class Collectible : MonoBehaviour
         else if (activeCollectibleType == CollectibleType.Pistol)
         {
             HUD.Instance._index = 1;
-        }
-        else if (activeCollectibleType == CollectibleType.Shotgun)
-        {
-            HUD.Instance._index = 4; //TODO double check the 4
         }
 
         //TODO do same for pistol

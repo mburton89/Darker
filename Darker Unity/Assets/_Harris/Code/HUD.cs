@@ -95,17 +95,9 @@ public class HUD : MonoBehaviour
         {
             _FirstAidThumbnail.SetActive(true);
         }
-        else if (collectibleType == Collectible.CollectibleType.Knife)
-        {
-            _KnifeThumbnail.SetActive(true);
-        }
         else if (collectibleType == Collectible.CollectibleType.Pistol)
         {
             _PistolThumbnail.SetActive(true);
-        }
-        else if (collectibleType == Collectible.CollectibleType.Shotgun)
-        {
-            _ShotgunThumbnail.SetActive(true);
         }
     }
 }
