@@ -33,6 +33,18 @@ public class Footsteps : MonoBehaviour
         {
             accumulated_Distance += 1;
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            accumulated_Distance += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            accumulated_Distance += 1;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            accumulated_Distance += 1;
+        }
     }
 
     void CheckToPlayFootStepSound()
