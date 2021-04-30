@@ -106,7 +106,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Reload Pistol
-        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false)
+        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false && bulletsInMagazine >= magazineSize == false)
         {
             Instantiate(reloadPrefab, pistol.transform);
             ReloadPistol();

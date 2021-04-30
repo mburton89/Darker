@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
 
         impactPoint = collision.contacts[0].point;
-        Instantiate(impactEffect, impactPoint, Quaternion.LookRotation(impactPoint));
+        Instantiate(impactEffect, impactPoint, Quaternion.identity);
 
         if ((collision.gameObject.GetComponent("HealthManager") != null))
         {
