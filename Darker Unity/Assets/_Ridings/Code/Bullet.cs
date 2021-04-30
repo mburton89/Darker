@@ -19,13 +19,15 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<HealthManager>().health -= 10;
         }
-
-        if ((collision.gameObject.GetComponent("AIScript") != null))
-        {
-            collision.collider.SendMessage("FiringLocation");
-        }
-
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if ((collider.gameObject.GetComponent("AIScript") != null))
+        {
+            collider.SendMessage("FiringLocation");
+        }
+        Destroy(gameObject);
+    }
 }
