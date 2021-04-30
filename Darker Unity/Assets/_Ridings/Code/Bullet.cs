@@ -5,12 +5,24 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
+    public Transform startPosition;
+
+    private void Awake()
+    {
+        startPosition = gameObject.transform;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
 
         if ((collision.gameObject.GetComponent("HealthManager") != null))
         {
             collision.gameObject.GetComponent<HealthManager>().health -= 10;
+        }
+
+        if ((collision.gameObject.GetComponent("AIScript") != null))
+        {
+            collision.collider.SendMessage("FiringLocation");
         }
 
         Destroy(gameObject);

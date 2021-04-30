@@ -13,7 +13,7 @@ public class AIScript : MonoBehaviour
 
     public GameObject playerDetectedPrefab;
 
-    Transform target;
+    public Transform target;
     NavMeshAgent agent;
     public int attackCooldown = 0;
 
@@ -65,6 +65,11 @@ public class AIScript : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    void FiringLocation()
+    {
+        agent.SetDestination(PlayerManager.instance.player.transform.position);
     }
 
     /*void Attack()
