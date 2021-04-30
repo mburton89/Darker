@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
 
     public Transform startPosition;
+    public GameObject impactEffect;
+    private Vector3 impactPoint;
 
     private void Awake()
     {
@@ -14,6 +16,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        impactPoint = collision.contacts[0].point;
+        Instantiate(impactEffect, impactPoint, Quaternion.identity);
 
         if ((collision.gameObject.GetComponent("HealthManager") != null))
         {

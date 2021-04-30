@@ -7767,6 +7767,7 @@ GameObject:
   - component: {fileID: 1253109167}
   - component: {fileID: 693622911}
   - component: {fileID: 693622913}
+  - component: {fileID: 29955357}
   m_Layer: 0
   m_Name: Shade
   m_TagString: Untagged
@@ -7956,7 +7957,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: fa9d83c09cd02814fa201e144601ccec, type: 2}
-  m_audioClip: {fileID: 8300000, guid: d4825960fc8277f42afaf41f66ac2169, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6f85f5e95e419004f946eb890b5d0c2b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8042,6 +8043,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &29955357
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277520624065541237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.28
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.26, z: -0.13}
 --- !u!1 &7397612284366732499
 GameObject:
   m_ObjectHideFlags: 0
