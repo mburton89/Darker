@@ -7767,6 +7767,7 @@ GameObject:
   - component: {fileID: 1253109167}
   - component: {fileID: 693622911}
   - component: {fileID: 693622913}
+  - component: {fileID: 29955357}
   m_Layer: 0
   m_Name: Shade
   m_TagString: Untagged
@@ -8042,6 +8043,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &29955357
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277520624065541237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.28
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.26, z: -0.13}
 --- !u!1 &7397612284366732499
 GameObject:
   m_ObjectHideFlags: 0
