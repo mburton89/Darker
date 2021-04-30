@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controllerPlayer;
 
     //Values for movement speeds and other world constants
-    public float speed = 10f;
+    public float speed = 8f;
     public float gravity = -9.8f;
-    public float jumpHeight = 6f;
+    public float jumpHeight = 2f;
     float x;
     float z;
 
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case 8:
                     controllerPlayer.height = 1.8f;
-                    speed = 4f;
+                    speed = 2f;
                     isCrouched = true;
                     frameStep--;
                     break;
@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case 0:
                     controllerPlayer.height = 3.8f;
-                    speed = 10f;
+                    speed = 8f;
                     isCrouched = false;
                     frameStep++;
                     break;
@@ -121,19 +121,19 @@ public class PlayerMovement : MonoBehaviour
         //checks for input to sprint
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprint)
         {
-            speed = 16f;
+            speed = 12f;
             isSprint = true;
         }
         else if (Input.GetKeyDown(KeyCode.LeftShift) && isSprint)
         {
-            speed = 10f;
+            speed = 8f;
             isSprint = false;
         }
 
         //Checks if the player is attempting to jump while grounded
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            speed = 10f;
+            speed = 8f;
             controllerPlayer.height = 3.8f;
             frameStep = 0;
             velocity.y = Mathf.Sqrt(jumpHeight * -6f * gravity);

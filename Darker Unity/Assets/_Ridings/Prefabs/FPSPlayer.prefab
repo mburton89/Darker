@@ -8393,9 +8393,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerPlayer: {fileID: 1845522738707738085}
-  speed: 12
+  speed: 8
   gravity: -9.8
-  jumpHeight: 3
+  jumpHeight: 2
   groundCheck: {fileID: 1845522739874857034}
   groundDistance: 0.4
   groundMask:
@@ -8495,6 +8495,7 @@ MonoBehaviour:
   viewColor: {fileID: 211558886}
   deathCamera: {fileID: 1183462594}
   deathMenu: {fileID: 1012724086}
+  deadShade: {fileID: 0}
 --- !u!114 &1738996425
 MonoBehaviour:
   m_ObjectHideFlags: 0

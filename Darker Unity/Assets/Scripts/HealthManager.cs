@@ -103,6 +103,6 @@ public class HealthManager : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main_Menu");
     }
 }
