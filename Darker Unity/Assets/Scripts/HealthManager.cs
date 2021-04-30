@@ -88,7 +88,7 @@ public class HealthManager : MonoBehaviour
     public void KillShade()
     {
         Instantiate(deadShade, entity.transform.position + transform.up * 1.5f, entity.transform.rotation, null);
-        Destroy(gameObject);
+        Destroy(entity);
     }
 
     public void Instakill()

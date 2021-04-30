@@ -15,6 +15,9 @@ public class AIScript : MonoBehaviour
 
     public Transform target;
     NavMeshAgent agent;
+
+    public Collider leftHurtbox;
+    public Collider rightHurtbox;
     public int attackCooldown = 0;
 
     // Start is called before the first frame update
