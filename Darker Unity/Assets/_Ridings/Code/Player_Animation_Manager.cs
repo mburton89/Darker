@@ -7,6 +7,9 @@ public class Player_Animation_Manager : MonoBehaviour
 {
     public PlayerRaycasting playerRaycasting;
     public HUD hud;
+    public CharacterController characterController;
+
+    public GameObject footstepControllerPrefab;
 
     public Animator animator;
     public GameObject pistol;
@@ -246,6 +249,12 @@ public class Player_Animation_Manager : MonoBehaviour
         else
         {
             animator.SetBool(nearInteractableID, false);
+        }
+
+        //Walking
+        if (characterController.velocity.sqrMagnitude > 0 && !FindObjectOfType<FootstepController>())
+        {
+                Instantiate(footstepControllerPrefab, characterController.transform.position, characterController.transform.rotation, null);
         }
 
     }

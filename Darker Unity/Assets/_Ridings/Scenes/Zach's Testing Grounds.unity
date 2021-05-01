@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0005778665, g: 0.00040781155, b: 0.0003759242, a: 1}
+  m_IndirectSpecularColor: {r: 0.00057546276, g: 0.00040658616, b: 0.00037437634, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -556,6 +556,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &246833681 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 1845522738707738085, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
+  m_PrefabInstance: {fileID: 6317072265837982742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &447240597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3067,6 +3072,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6317072266570645542, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
+      propertyPath: characterController
+      value: 
+      objectReference: {fileID: 246833681}
+    - target: {fileID: 6317072266570645542, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
+      propertyPath: footstepControllerPrefab
+      value: 
+      objectReference: {fileID: 7242719648654223004, guid: 8e8fb091c15d9ce45975db83f6973575, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
 --- !u!1 &6621612298868581068
