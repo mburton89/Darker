@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Animation_Manager : MonoBehaviour
 {
@@ -19,6 +20,15 @@ public class Player_Animation_Manager : MonoBehaviour
     public int magazineSize;
     public int bulletsInMagazine;
     public float projectileSpeed;
+
+    public Image bulletOne;
+    public Image bulletTwo;
+    public Image bulletThree;
+    public Image bulletFour;
+    public Image bulletFive;
+    public Image bulletSix;
+    public Image bulletSeven;
+    public Image bulletEight;
 
     private int pistolFiredID;
     private int nearInteractableID;
@@ -115,6 +125,114 @@ public class Player_Animation_Manager : MonoBehaviour
         else
         {
             animator.SetBool(isReloadingID, false);
+        }
+
+        if (bulletsInMagazine == 8)
+        {
+            bulletOne.color = Color.white;
+            bulletTwo.color = Color.white;
+            bulletThree.color = Color.white;
+            bulletFour.color = Color.white;
+            bulletFive.color = Color.white;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 7)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.white;
+            bulletThree.color = Color.white;
+            bulletFour.color = Color.white;
+            bulletFive.color = Color.white;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 6)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.white;
+            bulletFour.color = Color.white;
+            bulletFive.color = Color.white;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 5)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.white;
+            bulletFive.color = Color.white;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 4)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.black;
+            bulletFive.color = Color.white;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 3)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.black;
+            bulletFive.color = Color.black;
+            bulletSix.color = Color.white;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 2)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.black;
+            bulletFive.color = Color.black;
+            bulletSix.color = Color.black;
+            bulletSeven.color = Color.white;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 1)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.black;
+            bulletFive.color = Color.black;
+            bulletSix.color = Color.black;
+            bulletSeven.color = Color.black;
+            bulletEight.color = Color.white;
+        }
+
+        if (bulletsInMagazine == 0)
+        {
+            bulletOne.color = Color.black;
+            bulletTwo.color = Color.black;
+            bulletThree.color = Color.black;
+            bulletFour.color = Color.black;
+            bulletFive.color = Color.black;
+            bulletSix.color = Color.black;
+            bulletSeven.color = Color.black;
+            bulletEight.color = Color.black;
         }
 
         if (playerRaycasting.whatIHit.collider != null)

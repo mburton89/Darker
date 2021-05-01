@@ -47,7 +47,7 @@ public class AIScript : MonoBehaviour
             if (distance <= agent.stoppingDistance)
             {
                 FaceTarget();
-                //Attack();
+                Attack();
             }
         }
 
@@ -55,6 +55,8 @@ public class AIScript : MonoBehaviour
         {
             animator.SetBool(playerDetectedID, false);
         }
+
+        
     }
 
     void FaceTarget()
@@ -75,7 +77,7 @@ public class AIScript : MonoBehaviour
         agent.SetDestination(PlayerManager.instance.player.transform.position);
     }
 
-    /*void Attack()
+    void Attack()
     {
         if (attackCooldown == 10)
         {
@@ -86,5 +88,5 @@ public class AIScript : MonoBehaviour
         {
             attackCooldown++;
         }
-    }*/
+    }
 }
