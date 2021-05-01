@@ -251,12 +251,12 @@ public class Player_Animation_Manager : MonoBehaviour
             animator.SetBool(nearInteractableID, false);
         }
 
-        //Walking
-        if (characterController.velocity.sqrMagnitude > 0 && !FindObjectOfType<FootstepController>())
+       /* //Walking
+        if (characterController.velocity.magnitude > 0 && footstepControllerPrefab.activeInHierarchy == false)
         {
-                Instantiate(footstepControllerPrefab, characterController.transform.position, characterController.transform.rotation, null);
+                footstepControllerPrefab.SetActive(true);
         }
-
+        */
     }
     
     void FirePistol()

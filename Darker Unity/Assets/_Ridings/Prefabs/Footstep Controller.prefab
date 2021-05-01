@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9079732841584405540}
   m_Layer: 0
   m_Name: Footstep Controller
-  m_TagString: Untagged
+  m_TagString: Step
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -88,7 +88,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -141,4 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepPrefab: {fileID: 8970565504366359257}
+  audioClips:
+  - {fileID: 8300000, guid: 4488f16cad48ba3439f0360d33e011f5, type: 3}
+  - {fileID: 8300000, guid: bbf31bb2b547f7a4b9e34b05566dbb7c, type: 3}
+  - {fileID: 8300000, guid: cb45c16cdc762b943ab594985eab1925, type: 3}
+  - {fileID: 8300000, guid: dbb827d301eec13478b8986bbfc72bdc, type: 3}
   stepDelay: 0
