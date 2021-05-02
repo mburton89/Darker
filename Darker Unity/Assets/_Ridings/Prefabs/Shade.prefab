@@ -7822,7 +7822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686b0dd3810893f4e92ed9cc9b93f18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 15
   animator: {fileID: 784622387}
   playerDetectedPrefab: {fileID: 4821390853768724142, guid: 7a2acd08cb89e9241a510e50e4d26d8d, type: 3}
   target: {fileID: 0}
