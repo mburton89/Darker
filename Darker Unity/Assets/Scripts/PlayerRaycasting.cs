@@ -28,14 +28,17 @@ public class PlayerRaycasting : MonoBehaviour
                     GameObject thingIUse = GameObject.Find(whatIHit.collider.gameObject.name);
                     switch (thingIUse.name)
                     {
-                        case "TestInteract":
-                            thingIUse.GetComponent<TestInteract>().Interaction();
+                        case "first_aid":
+                            thingIUse.GetComponent<Healies>().Interaction();
                             break;
                         case "Keypad":
                             thingIUse.GetComponent<TestDoorInteract>().Interaction();
                             break;
                         case "CodePoster":
                             thingIUse.GetComponent<FileInteract>().Interaction();
+                            break;
+                        case "TestInteract":
+                            thingIUse.GetComponent<TestInteract>().Interaction();
                             break;
                         case "Button":
                             thingIUse.GetComponent<TestDoorInteract>().Interaction();

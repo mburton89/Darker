@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3040867755207576686}
   - component: {fileID: 3669524861993215637}
   - component: {fileID: 3871644934910744427}
+  - component: {fileID: 2054602623}
+  - component: {fileID: 6007737921442905928}
   m_Layer: 0
   m_Name: first_aid
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +83,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2054602623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194187219344072668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2520e0cc709ab46b5298c2e48283e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSPlayer: {fileID: 0}
+--- !u!65 &6007737921442905928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194187219344072668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.257577, y: 0.07258276, z: 0.15694755}
+  m_Center: {x: 0, y: 0.036288407, z: 0}
