@@ -16,7 +16,7 @@ public class End : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision gameObjectInformation){
+    private void OnTriggerEnter(Collider gameObjectInformation){
         if (gameObjectInformation.gameObject.name == "FPSPlayer") {
             Debug.Log("Collision Detected");
             SceneManager.LoadScene("Credits");
