@@ -247,6 +247,12 @@ public class Player_Animation_Manager : MonoBehaviour
             if (playerRaycasting.whatIHit.collider.gameObject.tag == "Interactable")
             {
                 animator.SetBool(nearInteractableID, true);
+
+                if (playerRaycasting.whatIHit.collider.gameObject.name == "Pistol Ammo" && Input.GetButtonDown("Interact"))
+                {
+                    Destroy(playerRaycasting.whatIHit.collider.gameObject);
+                    GetAmmoClip();
+                }
             }
         }
 
@@ -279,6 +285,11 @@ public class Player_Animation_Manager : MonoBehaviour
         reloading = true;
         animator.SetBool(isReloadingID, true);
         StartCoroutine("ReloadWait");
+    }
+
+    void GetAmmoClip()
+    {
+        ammoClips += 1;
     }
 
     IEnumerator MuzzleFlash()
