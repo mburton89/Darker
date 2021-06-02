@@ -22,6 +22,7 @@ public class Player_Animation_Manager : MonoBehaviour
 
     public int magazineSize;
     public int bulletsInMagazine;
+    public int ammoClips;
     public float projectileSpeed;
 
     public Image bulletOne;
@@ -67,6 +68,9 @@ public class Player_Animation_Manager : MonoBehaviour
 
         //Initialize Ammunition
         bulletsInMagazine = magazineSize;
+
+        //Starting Ammo Clips
+        ammoClips = 1;
 
     }
 
@@ -119,7 +123,7 @@ public class Player_Animation_Manager : MonoBehaviour
         }
 
         //Reload Pistol
-        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false && bulletsInMagazine >= magazineSize == false)
+        if (Input.GetButtonDown("Reload") && animator.GetBool(pistolEquippedID) == true && reloading == false && bulletsInMagazine >= magazineSize == false && ammoClips > 0)
         {
             Instantiate(reloadPrefab, pistol.transform);
             ReloadPistol();
@@ -243,6 +247,12 @@ public class Player_Animation_Manager : MonoBehaviour
             if (playerRaycasting.whatIHit.collider.gameObject.tag == "Interactable")
             {
                 animator.SetBool(nearInteractableID, true);
+
+                if (playerRaycasting.whatIHit.collider.gameObject.name == "Pistol Ammo" && Input.GetButtonDown("Interact"))
+                {
+                    Destroy(playerRaycasting.whatIHit.collider.gameObject);
+                    GetAmmoClip();
+                }
             }
         }
 
@@ -277,6 +287,11 @@ public class Player_Animation_Manager : MonoBehaviour
         StartCoroutine("ReloadWait");
     }
 
+    void GetAmmoClip()
+    {
+        ammoClips += 1;
+    }
+
     IEnumerator MuzzleFlash()
     {
         muzzleFlash.SetActive(true);
@@ -288,6 +303,7 @@ public class Player_Animation_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.6f);
         bulletsInMagazine = magazineSize;
+        ammoClips -= 1;
         reloading = false;
     }
 }
