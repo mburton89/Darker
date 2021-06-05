@@ -8,7 +8,9 @@ public class HealthManager : MonoBehaviour
 {
     public GameObject entity;
     public int health;
+    public int currentHealth = 100;
     public Text healthDisplay;
+    public float healthTimer = 6000f;
     public Image viewColor;
     public Camera deathCamera;
     public GameObject deathMenu;
@@ -27,7 +29,7 @@ public class HealthManager : MonoBehaviour
     {
         if (entity.name == "FPSPlayer")
         {
-            /*if (Time.timeScale == 0)
+            if (Time.timeScale == 0)
             {
                 healthDisplay.enabled = false;
             }
@@ -35,7 +37,7 @@ public class HealthManager : MonoBehaviour
             {
                 healthDisplay.enabled = true;
             }
-            healthDisplay.text = "HEALTH: " + health.ToString();*/
+            healthDisplay.text = "HEALTH: " + health.ToString();
             if (health <= 0)
             {
                 var tempColor = viewColor.color;
@@ -66,12 +68,26 @@ public class HealthManager : MonoBehaviour
                 tempColor.a = 0f;
                 viewColor.color = tempColor;
             }
+
+            if (health != currentHealth)
+            {
+                healthTimer = 6000f;
+                currentHealth = health;
+            }
+
+            if (healthTimer != 0f)
+            {
+                var alph = healthDisplay.color;
+                alph.a = healthTimer / 60f;
+                healthDisplay.color = alph;
+                healthTimer--;
+            }
         }
         if (health <= 0)
         {
             if (entity.name == "FPSPlayer")
             {
-                //healthDisplay.text = "";
+                healthDisplay.text = "";
                 Cursor.lockState = CursorLockMode.Confined;
                 deathCamera.enabled = true;
                 deathMenu.SetActive(true);

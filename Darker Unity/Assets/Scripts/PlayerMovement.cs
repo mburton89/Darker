@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public int frameStep = 0;
 
     public bool isSprint = false;
+    public float stamina = 100f;
 
     public Collectible activeCollectible;
 
@@ -119,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //checks for input to sprint
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprint)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isSprint && stamina >= 15)
         {
             speed = 12f;
             isSprint = true;
@@ -129,6 +130,14 @@ public class PlayerMovement : MonoBehaviour
             speed = 8f;
             isSprint = false;
         }
+        if (isSprint == true) stamina -= 4f;
+        if (isSprint == true && stamina <= 0)
+        {
+            speed = 8f;
+            isSprint = false;
+        }
+        if (isSprint == false && stamina < 100f) stamina += 5f;
+        Debug.Log(stamina);
 
         //Checks if the player is attempting to jump while grounded
         if (Input.GetButtonDown("Jump") && isGrounded)

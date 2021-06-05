@@ -267,6 +267,7 @@ MonoBehaviour:
   playerCamera: {fileID: 7148918484859467689}
   frameStep: 0
   isSprint: 0
+  stamina: 100
   activeCollectible: {fileID: 0}
 --- !u!114 &71672435
 MonoBehaviour:
@@ -310,7 +311,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 71672431}
   health: 100
+  currentHealth: 100
   healthDisplay: {fileID: 1582905940}
+  healthTimer: 0
   viewColor: {fileID: 211558886}
   deathCamera: {fileID: 0}
   deathMenu: {fileID: 1012724086}
@@ -329,6 +332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRaycasting: {fileID: 1846767328}
   hud: {fileID: 0}
+  characterController: {fileID: 0}
+  footstepControllerPrefab: {fileID: 0}
   animator: {fileID: 7148918484179343962}
   pistol: {fileID: 4410975211026699471}
   muzzleFlash: {fileID: 0}
@@ -340,6 +345,14 @@ MonoBehaviour:
   magazineSize: 0
   bulletsInMagazine: 0
   projectileSpeed: 240
+  bulletOne: {fileID: 0}
+  bulletTwo: {fileID: 0}
+  bulletThree: {fileID: 0}
+  bulletFour: {fileID: 0}
+  bulletFive: {fileID: 0}
+  bulletSix: {fileID: 0}
+  bulletSeven: {fileID: 0}
+  bulletEight: {fileID: 0}
   indexNumber: 0
 --- !u!114 &196064024 stripped
 MonoBehaviour:
@@ -592,6 +605,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 374070698}
+    - target: {fileID: 1582905938, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1686668247, guid: 3a6a0a70b2b27ed489d5fbb8c46622c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
