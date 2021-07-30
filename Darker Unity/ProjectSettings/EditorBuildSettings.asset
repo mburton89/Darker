@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Elder/Main_Menu/Main_Menu.unity
     guid: 87966952938740a4db9ae3fde41a4b9e
   - enabled: 1
-    path: Assets/_Sadikovic/Alleyway Level 1.unity
+    path: Assets/_Sadikovic/Scenes/Alleyway Level 1.unity
     guid: c64bb8a3121cf3d40a1c9036968c98b9
   - enabled: 1
     path: Assets/_Elder/Main_Menu/Story.unity
